@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#3a4964"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #1e2a43; }
+      .subtitle { font: 600 16px Arial, sans-serif; fill: #48628b; }
+      .card { stroke: #95a9cb; stroke-width: 2; rx: 18; ry: 18; }
+      .step { font: 700 19px Arial, sans-serif; fill: #1d2841; }
+      .text { font: 14px Arial, sans-serif; fill: #314261; }
+      .arrow { stroke: #3a4964; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#f8fbff"/>
+  <text x="600" y="46" text-anchor="middle" class="title">Collaborative Assembly Sequence with Gesture Supervision</text>
+  <text x="600" y="74" text-anchor="middle" class="subtitle">A representative application example for industrial intelligent motion control</text>
+
+  <rect x="70" y="145" width="160" height="155" fill="#dff3ff" class="card"/>
+  <text x="150" y="178" text-anchor="middle" class="step">1. Point</text>
+  <text x="150" y="205" text-anchor="middle" class="text">Operator points to</text>
+  <text x="150" y="226" text-anchor="middle" class="text">a target tray zone</text>
+  <text x="150" y="256" text-anchor="middle" class="text">Vision interprets</text>
+  <text x="150" y="277" text-anchor="middle" class="text">selection intent</text>
+
+  <rect x="270" y="145" width="160" height="155" fill="#e6f8ea" class="card"/>
+  <text x="350" y="178" text-anchor="middle" class="step">2. Pinch</text>
+  <text x="350" y="205" text-anchor="middle" class="text">Pinch confirms</text>
+  <text x="350" y="226" text-anchor="middle" class="text">pickup command</text>
+  <text x="350" y="256" text-anchor="middle" class="text">Robot plans a safe</text>
+  <text x="350" y="277" text-anchor="middle" class="text">pre-grasp approach</text>
+
+  <rect x="470" y="145" width="160" height="155" fill="#fff2d8" class="card"/>
+  <text x="550" y="178" text-anchor="middle" class="step">3. Track</text>
+  <text x="550" y="205" text-anchor="middle" class="text">Robot closes in</text>
+  <text x="550" y="226" text-anchor="middle" class="text">with visual servoing</text>
+  <text x="550" y="256" text-anchor="middle" class="text">Speed drops near</text>
+  <text x="550" y="277" text-anchor="middle" class="text">contact surfaces</text>
+
+  <rect x="670" y="145" width="160" height="155" fill="#efe5ff" class="card"/>
+  <text x="750" y="178" text-anchor="middle" class="step">4. Rotate</text>
+  <text x="750" y="205" text-anchor="middle" class="text">Wrist motion edits</text>
+  <text x="750" y="226" text-anchor="middle" class="text">tool orientation</text>
+  <text x="750" y="256" text-anchor="middle" class="text">Continuous Cartesian</text>
+  <text x="750" y="277" text-anchor="middle" class="text">velocity mapping</text>
+
+  <rect x="870" y="145" width="160" height="155" fill="#ffe4e8" class="card"/>
+  <text x="950" y="178" text-anchor="middle" class="step">5. Insert</text>
+  <text x="950" y="205" text-anchor="middle" class="text">Impedance mode</text>
+  <text x="950" y="226" text-anchor="middle" class="text">handles alignment</text>
+  <text x="950" y="256" text-anchor="middle" class="text">Force peaks remain</text>
+  <text x="950" y="277" text-anchor="middle" class="text">within safe bounds</text>
+
+  <path d="M230 223 L268 223" class="arrow"/>
+  <path d="M430 223 L468 223" class="arrow"/>
+  <path d="M630 223 L668 223" class="arrow"/>
+  <path d="M830 223 L868 223" class="arrow"/>
+
+  <rect x="120" y="395" width="300" height="180" rx="22" ry="22" fill="#ffffff" stroke="#9db0d0" stroke-width="2"/>
+  <text x="150" y="432" class="step">Gesture-to-command examples</text>
+  <text x="150" y="463" class="text">Point -> target selection</text>
+  <text x="150" y="489" class="text">Pinch -> execute / confirm</text>
+  <text x="150" y="515" class="text">Open palm -> monitored stop</text>
+  <text x="150" y="541" class="text">Wrist rotate -> orientation trim</text>
+
+  <rect x="455" y="395" width="300" height="180" rx="22" ry="22" fill="#ffffff" stroke="#9db0d0" stroke-width="2"/>
+  <text x="485" y="432" class="step">Controller behavior</text>
+  <text x="485" y="463" class="text">- jerk-limited trajectory update</text>
+  <text x="485" y="489" class="text">- Jacobian-based kinematic mapping</text>
+  <text x="485" y="515" class="text">- collision-aware path correction</text>
+  <text x="485" y="541" class="text">- mode switch to impedance on contact</text>
+
+  <rect x="790" y="395" width="290" height="180" rx="22" ry="22" fill="#ffffff" stroke="#9db0d0" stroke-width="2"/>
+  <text x="820" y="432" class="step">Industrial value</text>
+  <text x="820" y="463" class="text">- quicker retargeting</text>
+  <text x="820" y="489" class="text">- less teach-pendant jogging</text>
+  <text x="820" y="515" class="text">- more intuitive human supervision</text>
+  <text x="820" y="541" class="text">- higher adaptability in mixed-model lines</text>
+
+  <path d="M350 300 C350 340, 320 360, 270 395" class="arrow"/>
+  <path d="M550 300 C550 340, 595 360, 605 395" class="arrow"/>
+  <path d="M950 300 C950 340, 930 360, 935 395" class="arrow"/>
+</svg>
