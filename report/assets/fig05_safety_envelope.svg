@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#384861"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #1f2a44; }
+      .subtitle { font: 600 16px Arial, sans-serif; fill: #4b638d; }
+      .label { font: 15px Arial, sans-serif; fill: #243251; }
+      .small { font: 14px Arial, sans-serif; fill: #3c4a67; }
+      .bold { font: 700 16px Arial, sans-serif; fill: #18243d; }
+      .arrow { stroke: #384861; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#f8fbff"/>
+  <text x="600" y="46" text-anchor="middle" class="title">Safety Envelope for Human-Robot Shared Workspace</text>
+  <text x="600" y="74" text-anchor="middle" class="subtitle">Robot speed and control mode adapt continuously to operator distance and task phase</text>
+
+  <circle cx="340" cy="390" r="205" fill="#ffd9de" stroke="#d58791" stroke-width="3"/>
+  <circle cx="340" cy="390" r="145" fill="#fff0b8" stroke="#cfb24c" stroke-width="3"/>
+  <circle cx="340" cy="390" r="85" fill="#dff5e4" stroke="#7fb88a" stroke-width="3"/>
+
+  <rect x="310" y="315" width="60" height="120" rx="18" ry="18" fill="#607d8b"/>
+  <circle cx="340" cy="285" r="30" fill="#607d8b"/>
+  <line x1="315" y1="350" x2="260" y2="390" stroke="#607d8b" stroke-width="12" stroke-linecap="round"/>
+  <line x1="365" y1="350" x2="420" y2="390" stroke="#607d8b" stroke-width="12" stroke-linecap="round"/>
+  <line x1="325" y1="435" x2="285" y2="515" stroke="#607d8b" stroke-width="12" stroke-linecap="round"/>
+  <line x1="355" y1="435" x2="395" y2="515" stroke="#607d8b" stroke-width="12" stroke-linecap="round"/>
+
+  <rect x="610" y="220" width="450" height="360" rx="24" ry="24" fill="#ffffff" stroke="#9cb0d1" stroke-width="2"/>
+  <text x="640" y="260" class="bold">Zone interpretation</text>
+
+  <rect x="640" y="285" width="390" height="72" rx="14" ry="14" fill="#dff5e4" stroke="#83b98e" stroke-width="2"/>
+  <text x="665" y="312" class="bold">Inner zone: close collaboration</text>
+  <text x="665" y="336" class="small">Low speed, compliant impedance mode, high monitoring sensitivity</text>
+
+  <rect x="640" y="374" width="390" height="72" rx="14" ry="14" fill="#fff0b8" stroke="#c8ae55" stroke-width="2"/>
+  <text x="665" y="401" class="bold">Middle zone: controlled operation</text>
+  <text x="665" y="425" class="small">Moderate speed, predictive slowdown, gesture supervision active</text>
+
+  <rect x="640" y="463" width="390" height="72" rx="14" ry="14" fill="#ffd9de" stroke="#cf8390" stroke-width="2"/>
+  <text x="665" y="490" class="bold">Outer risk zone: monitored stop threshold</text>
+  <text x="665" y="514" class="small">If intrusion or uncertainty rises, speed limit tends toward zero</text>
+
+  <path d="M545 265 C590 250, 600 248, 632 248" class="arrow"/>
+  <path d="M545 390 C590 390, 600 410, 632 410" class="arrow"/>
+  <path d="M545 515 C590 520, 600 500, 632 500" class="arrow"/>
+
+  <line x1="150" y1="650" x2="1070" y2="650" stroke="#4c5e80" stroke-width="2"/>
+  <line x1="150" y1="620" x2="150" y2="650" stroke="#4c5e80" stroke-width="2"/>
+  <line x1="350" y1="620" x2="350" y2="650" stroke="#4c5e80" stroke-width="2"/>
+  <line x1="610" y1="620" x2="610" y2="650" stroke="#4c5e80" stroke-width="2"/>
+  <line x1="870" y1="620" x2="870" y2="650" stroke="#4c5e80" stroke-width="2"/>
+  <line x1="1070" y1="620" x2="1070" y2="650" stroke="#4c5e80" stroke-width="2"/>
+  <text x="150" y="675" text-anchor="middle" class="label">0 m</text>
+  <text x="350" y="675" text-anchor="middle" class="label">0.5 m</text>
+  <text x="610" y="675" text-anchor="middle" class="label">1.0 m</text>
+  <text x="870" y="675" text-anchor="middle" class="label">1.5 m</text>
+  <text x="1070" y="675" text-anchor="middle" class="label">2.0 m</text>
+  <text x="610" y="705" text-anchor="middle" class="small">Example human-robot separation distance scale</text>
+
+  <text x="95" y="140" class="label">Robot center</text>
+  <text x="83" y="165" class="small">speed limits tighten toward the center</text>
+</svg>

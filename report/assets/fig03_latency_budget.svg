@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <style>
+    .title { font: 700 28px Arial, sans-serif; fill: #1e2a43; }
+    .subtitle { font: 600 16px Arial, sans-serif; fill: #46608a; }
+    .axis { stroke: #495b7d; stroke-width: 2; }
+    .grid { stroke: #d3dcef; stroke-width: 1; }
+    .label { font: 15px Arial, sans-serif; fill: #23324f; }
+    .small { font: 14px Arial, sans-serif; fill: #41506a; }
+    .value { font: 700 15px Arial, sans-serif; fill: #13213d; }
+  </style>
+
+  <rect width="1200" height="680" fill="#f8fbff"/>
+  <text x="600" y="48" text-anchor="middle" class="title">End-to-End Latency Budget for Gesture-Based Robot Motion Control</text>
+  <text x="600" y="76" text-anchor="middle" class="subtitle">Illustrative timing breakdown for a practical industrial interactive loop</text>
+
+  <line x1="180" y1="560" x2="1070" y2="560" class="axis"/>
+  <line x1="180" y1="130" x2="180" y2="560" class="axis"/>
+
+  <line x1="180" y1="500" x2="1070" y2="500" class="grid"/>
+  <line x1="180" y1="440" x2="1070" y2="440" class="grid"/>
+  <line x1="180" y1="380" x2="1070" y2="380" class="grid"/>
+  <line x1="180" y1="320" x2="1070" y2="320" class="grid"/>
+  <line x1="180" y1="260" x2="1070" y2="260" class="grid"/>
+  <line x1="180" y1="200" x2="1070" y2="200" class="grid"/>
+
+  <text x="145" y="565" class="label">0</text>
+  <text x="135" y="505" class="label">20</text>
+  <text x="135" y="445" class="label">40</text>
+  <text x="135" y="385" class="label">60</text>
+  <text x="135" y="325" class="label">80</text>
+  <text x="125" y="265" class="label">100</text>
+  <text x="125" y="205" class="label">120</text>
+  <text x="88" y="150" transform="rotate(-90 88,150)" class="label">Latency (ms)</text>
+
+  <rect x="240" y="470" width="90" height="90" fill="#8dd3ff"/>
+  <rect x="370" y="430" width="90" height="130" fill="#7ad7b0"/>
+  <rect x="500" y="380" width="90" height="180" fill="#ffd27a"/>
+  <rect x="630" y="452" width="90" height="108" fill="#b3a4ff"/>
+  <rect x="760" y="500" width="90" height="60" fill="#ff9aa7"/>
+  <rect x="890" y="518" width="90" height="42" fill="#95a3bc"/>
+
+  <text x="285" y="462" text-anchor="middle" class="value">18 ms</text>
+  <text x="415" y="422" text-anchor="middle" class="value">26 ms</text>
+  <text x="545" y="372" text-anchor="middle" class="value">36 ms</text>
+  <text x="675" y="444" text-anchor="middle" class="value">22 ms</text>
+  <text x="805" y="492" text-anchor="middle" class="value">12 ms</text>
+  <text x="935" y="510" text-anchor="middle" class="value">8 ms</text>
+
+  <text x="285" y="588" text-anchor="middle" class="label">Image capture</text>
+  <text x="415" y="588" text-anchor="middle" class="label">Landmark extraction</text>
+  <text x="545" y="588" text-anchor="middle" class="label">Gesture inference</text>
+  <text x="675" y="588" text-anchor="middle" class="label">Planning and IK</text>
+  <text x="805" y="588" text-anchor="middle" class="label">Safety gating</text>
+  <text x="935" y="588" text-anchor="middle" class="label">Command dispatch</text>
+
+  <rect x="130" y="110" width="940" height="54" rx="15" ry="15" fill="#eef4ff" stroke="#8ca2c7" stroke-width="2"/>
+  <text x="600" y="143" text-anchor="middle" class="value">Total interactive delay: about 122 ms</text>
+
+  <rect x="790" y="190" width="260" height="180" rx="18" ry="18" fill="#ffffff" stroke="#9eb0d1" stroke-width="2"/>
+  <text x="815" y="225" class="label">Interpretation</text>
+  <text x="815" y="255" class="small">- Human perceives response as fluent below</text>
+  <text x="815" y="278" class="small">  roughly 100-120 ms for supervisory motion.</text>
+  <text x="815" y="308" class="small">- Low-level joint servo remains much faster</text>
+  <text x="815" y="331" class="small">  at 500-2000 Hz.</text>
+  <text x="815" y="361" class="small">- Optimization should focus on AI inference</text>
+  <text x="815" y="384" class="small">  and perception stability, not just motors.</text>
+
+  <text x="180" y="640" class="small">Note: these values are illustrative engineering targets, not a universal standard.</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#34425f"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #1e2a43; }
+      .subtitle { font: 600 16px Arial, sans-serif; fill: #42557f; }
+      .box { stroke: #5a6d91; stroke-width: 2; rx: 18; ry: 18; }
+      .label { font: 700 19px Arial, sans-serif; fill: #1d2841; }
+      .text { font: 14px Arial, sans-serif; fill: #314261; }
+      .arrow { stroke: #34425f; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .feedback { stroke: #a34757; stroke-width: 3; fill: none; stroke-dasharray: 8 6; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" fill="#f7faff"/>
+  <text x="600" y="44" text-anchor="middle" class="title">Closed-Loop Motion Control Pipeline</text>
+  <text x="600" y="71" text-anchor="middle" class="subtitle">From body-sensing input to robot motion, with supervision and feedback at every stage</text>
+
+  <rect x="60" y="125" width="160" height="88" fill="#dcf2ff" class="box"/>
+  <text x="140" y="160" text-anchor="middle" class="label">Human gesture</text>
+  <text x="140" y="184" text-anchor="middle" class="text">point / pinch / stop</text>
+
+  <rect x="260" y="125" width="170" height="88" fill="#e6f8ea" class="box"/>
+  <text x="345" y="160" text-anchor="middle" class="label">Perception</text>
+  <text x="345" y="184" text-anchor="middle" class="text">landmarks + depth</text>
+
+  <rect x="470" y="125" width="190" height="88" fill="#fff2d8" class="box"/>
+  <text x="565" y="160" text-anchor="middle" class="label">Intent inference</text>
+  <text x="565" y="184" text-anchor="middle" class="text">gesture class + confidence</text>
+
+  <rect x="700" y="125" width="190" height="88" fill="#efe5ff" class="box"/>
+  <text x="795" y="160" text-anchor="middle" class="label">Motion planner</text>
+  <text x="795" y="184" text-anchor="middle" class="text">IK + collision checking</text>
+
+  <rect x="930" y="125" width="200" height="88" fill="#ffe4e8" class="box"/>
+  <text x="1030" y="160" text-anchor="middle" class="label">Safety gate</text>
+  <text x="1030" y="184" text-anchor="middle" class="text">speed cap / stop logic</text>
+
+  <rect x="340" y="315" width="250" height="110" fill="#e7eeff" class="box"/>
+  <text x="465" y="350" text-anchor="middle" class="label">Robot controller</text>
+  <text x="465" y="375" text-anchor="middle" class="text">trajectory tracking</text>
+  <text x="465" y="396" text-anchor="middle" class="text">impedance / torque control</text>
+
+  <rect x="650" y="315" width="250" height="110" fill="#dfe7f4" class="box"/>
+  <text x="775" y="350" text-anchor="middle" class="label">Robot plant</text>
+  <text x="775" y="375" text-anchor="middle" class="text">joints, links, end-effector</text>
+  <text x="775" y="396" text-anchor="middle" class="text">contact with part / fixture</text>
+
+  <rect x="200" y="520" width="270" height="96" fill="#f2f6fd" class="box"/>
+  <text x="335" y="555" text-anchor="middle" class="label">State feedback</text>
+  <text x="335" y="578" text-anchor="middle" class="text">joint angles, velocity, force</text>
+
+  <rect x="560" y="520" width="270" height="96" fill="#fef5f6" class="box"/>
+  <text x="695" y="555" text-anchor="middle" class="label">Environment feedback</text>
+  <text x="695" y="578" text-anchor="middle" class="text">human distance, obstacle motion</text>
+
+  <rect x="920" y="520" width="180" height="96" fill="#f9f3e3" class="box"/>
+  <text x="1010" y="555" text-anchor="middle" class="label">Data log</text>
+  <text x="1010" y="578" text-anchor="middle" class="text">cycle time + events</text>
+
+  <path d="M220 169 L258 169" class="arrow"/>
+  <path d="M430 169 L468 169" class="arrow"/>
+  <path d="M660 169 L698 169" class="arrow"/>
+  <path d="M890 169 L928 169" class="arrow"/>
+  <path d="M1030 213 L1030 277 L560 277 L560 313" class="arrow"/>
+  <path d="M590 370 L648 370" class="arrow"/>
+  <path d="M775 427 L775 518" class="arrow"/>
+  <path d="M650 370 L590 370" class="feedback"/>
+  <path d="M335 520 L335 452 L405 452 L405 425" class="feedback"/>
+  <path d="M695 520 L695 458 L980 458 L980 213" class="feedback"/>
+  <path d="M1010 520 L1010 425 L900 425" class="arrow"/>
+
+  <text x="85" y="266" class="text">High-level human command</text>
+  <text x="523" y="294" class="text">Approved motion reference</text>
+  <text x="508" y="660" class="text">Dashed red arrows indicate closed-loop feedback and supervision.</text>
+
+  <rect x="60" y="300" width="220" height="120" rx="18" ry="18" fill="#ffffff" stroke="#88a2c9" stroke-width="2"/>
+  <text x="85" y="335" class="label">Key equations</text>
+  <text x="85" y="362" class="text">x_dot_d = K_h s_h</text>
+  <text x="85" y="386" class="text">q_dot_d = J# x_dot_d</text>
+  <text x="85" y="410" class="text">tau = M q_ddot_d + ...</text>
+</svg>
